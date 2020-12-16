@@ -34,10 +34,10 @@ package:
   include: []
 
 functions:
-  todo:
+  trigger-error:
     handler: benthos-lambda
     package:
-      artifact: dist/todo.zip
+      artifact: dist/trigger-error.zip
       # UPSTREAM: https://github.com/serverless/serverless/issues/4720#issuecomment-681750260
       individually: true
       exclude: ['*/**']
@@ -45,4 +45,4 @@ functions:
     events:
       - http:
           method: get
-          path: /todo
+          path: /trigger-error
