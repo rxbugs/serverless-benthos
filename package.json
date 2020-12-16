@@ -1,6 +1,6 @@
 {
   "name": "@rxbugs/serverless-benthos",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Bug tests for Benthos on AWS Lambda.",
   "private": true,
   "type": "module",
