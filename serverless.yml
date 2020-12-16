@@ -9,7 +9,7 @@ plugins:
 provider:
   name: aws
   runtime: go1.x
-  region: ${env:AWS_DEFAULT_REGION, 'us-east-1'}
+  region: ${env:AWS_DEFAULT_REGION, 'us-west-2'}
   stage: ${opt:stage, env:SERVERLESS_STAGE, 'stg'}
   logRetentionInDays: 30
   apiGateway:
