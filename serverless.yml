@@ -4,7 +4,6 @@ service: rxbugs-serverless-benthos
 frameworkVersion: '^2.0.0'
 
 plugins:
-  - serverless-domain-manager
   - serverless-offline
 
 provider:
@@ -20,11 +19,6 @@ provider:
     LOG_VERSION: ${file(./package.json):version}
 
 custom:
-  domain: razorx.app
-  customDomain:
-    domainName: ${self:provider.stage}.${self:service}.${self:custom.domain}
-    endpointType: regional
-    createRoute53Record: true
   serverless-offline:
     useDocker: true
 
