@@ -42,7 +42,3 @@ functions:
       individually: true
       exclude: ['*/**']
       include: []
-    events:
-      - http:
-          method: get
-          path: /trigger-err
