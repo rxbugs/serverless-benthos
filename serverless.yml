@@ -1,5 +1,5 @@
 ---
-service: serverless-benthos
+service: rxbugs-serverless-benthos
 
 frameworkVersion: '^2.0.0'
 
@@ -20,7 +20,7 @@ provider:
     LOG_VERSION: ${file(./package.json):version}
 
 custom:
-  domain: makenew.razorx.app
+  domain: rxbugs-serverless-benthos.razorx.app
   customDomain:
     domainName: ${self:provider.stage}.${self:service}.${self:custom.domain}
     endpointType: regional

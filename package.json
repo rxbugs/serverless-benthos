@@ -1,7 +1,7 @@
 {
-  "name": "@makenew/serverless-benthos",
-  "version": "1.0.0",
-  "description": "Package skeleton for a Benthos Serverless project on AWS Lambda.",
+  "name": "@rxbugs/serverless-benthos",
+  "version": "0.0.0",
+  "description": "Bug tests for Benthos on AWS Lambda.",
   "private": true,
   "type": "module",
   "main": "index.js",
@@ -10,9 +10,9 @@
   "keywords": [
     "benthos"
   ],
-  "homepage": "https://github.com/makenew/serverless-benthos",
-  "bugs": "https://github.com/makenew/serverless-benthos/issues",
-  "repository": "makenew/serverless-benthos",
+  "homepage": "https://github.com/rxbugs/serverless-benthos",
+  "bugs": "https://github.com/rxbugs/serverless-benthos/issues",
+  "repository": "rxbugs/serverless-benthos",
   "license": "MIT",
   "author": {
     "name": "Evan Sosenko",
@@ -54,7 +54,7 @@
   },
   "benthos": {
     "name": "benthos-lambda",
-    "version": "3.35.0",
+    "version": "0.0.0",
     "platform": "linux_amd64",
     "src": "https://github.com/jeffail/benthos/releases/download",
     "artifacts": [
