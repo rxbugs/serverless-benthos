@@ -25,7 +25,7 @@
   ],
   "scripts": {
     "postinstall": "npm-run-all benthos:install",
-    "test": "true",
+    "test": "benthos test config",
     "lint": "npm-run-all --parallel lint:*",
     "lint:prettier": "prettier --check --ignore-path .gitignore '**/*.(js|json|yaml|yml)'",
     "lint:js": "standard",
