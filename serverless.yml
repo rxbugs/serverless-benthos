@@ -20,7 +20,7 @@ provider:
     LOG_VERSION: ${file(./package.json):version}
 
 custom:
-  domain: rxbugs-serverless-benthos.razorx.app
+  domain: razorx.app
   customDomain:
     domainName: ${self:provider.stage}.${self:service}.${self:custom.domain}
     endpointType: regional
