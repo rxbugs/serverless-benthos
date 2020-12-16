@@ -12,7 +12,7 @@ output:
       - http_client:
           url: http://localhost:1234/this/url/always/fails
           timeout: 2s
-      - type: serverless_response
+      - type: sync_response
 
 logger:
   level: ${LOG_LEVEL:info}
