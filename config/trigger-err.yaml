@@ -1,9 +1,21 @@
 ---
 pipeline:
   processors:
+    - http:
+        url: http://localhost:1234/will/fail
+        verb: POST
     - bloblang: |
         root.body = "{\"data\":\"TODO\"}"
         root.statusCode = 200
+
+output:
+  switch:
+    cases:
+      - check: ! errored()
+        output:
+          serverless_response: {}
+      - output:
+          nack: 'processing failed due to: ${! error() }'
 
 logger:
   level: ${LOG_LEVEL:info}
