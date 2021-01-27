@@ -5,6 +5,7 @@ pipeline:
         root.body = "{\"data\":\"TODO\"}"
         root.statusCode = 200
     - branch:
+        result_map: 'tmp.res_bytes = content()'
         processors:
           - resource: worker_lambda
     - log:
