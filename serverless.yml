@@ -19,6 +19,18 @@ provider:
   environment:
     LOG_LEVEL: ${env:LOG_LEVEL, 'info'}
     LOG_VERSION: ${file(./package.json):version}
+  iamRoleStatements:
+    - Effect: 'Allow'
+      Action:
+        - 'lambda:InvokeFunction'
+      Resource:
+        - 'Fn::Join':
+            - ':'
+            - - 'arn:aws:lambda'
+              - Ref: 'AWS::Region'
+              - Ref: 'AWS::AccountId'
+              - function
+              - ${self:service}-${self:provider.stage}-worker
 
 custom:
   domain: razorx.app
@@ -43,6 +55,8 @@ functions:
       individually: true
       exclude: ['*/**']
       include: []
+    environment:
+      WORKER_LAMBDA: ${self:service}-${self:provider.stage}-worker
     events:
       - http:
           method: get

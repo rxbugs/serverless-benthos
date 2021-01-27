@@ -4,6 +4,12 @@ pipeline:
     - bloblang: |
         root.body = "{\"data\":\"TODO\"}"
         root.statusCode = 200
+    - branch:
+        request_map: |
+        processors:
+          - resource: worker_lambda
+    - log:
+        message: 'Error: ${! error() }'
 
 output:
   switch:
@@ -13,6 +19,13 @@ output:
           reject: ${! error() }
       - output:
           sync_response: {}
+
+resources:
+  processors:
+    worker_lambda:
+      aws_lambda:
+        region: ${AWS_REGION}
+        function: ${WORKER_LAMBDA:'null'}
 
 logger:
   level: ${LOG_LEVEL:info}
