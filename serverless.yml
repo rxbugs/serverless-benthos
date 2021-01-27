@@ -35,10 +35,10 @@ package:
   include: []
 
 functions:
-  trigger-err:
+  bug:
     handler: benthos-lambda
     package:
-      artifact: dist/trigger-err.zip
+      artifact: dist/bug.zip
       # UPSTREAM: https://github.com/serverless/serverless/issues/4720#issuecomment-681750260
       individually: true
       exclude: ['*/**']

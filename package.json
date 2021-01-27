@@ -53,7 +53,7 @@
     "platform": "linux_amd64",
     "src": "https://github.com/jeffail/benthos/releases/download",
     "artifacts": [
-      "trigger-err"
+      "bug"
     ]
   },
   "engines": {
