@@ -8,6 +8,9 @@ Bug tests for Benthos on AWS Lambda.
 
 Reproduce Benthos bugs.
 
+- https://stg.rxbugs-serverless-benthos.razorx.app/bug
+- https://prod.rxbugs-serverless-benthos.razorx.app/bug
+
 ## Development and Testing
 
 ### Quickstart
