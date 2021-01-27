@@ -1,6 +1,6 @@
 ---
 tests:
-  - name: todo
+  - name: status code 200
     target_processors: '/pipeline/processors'
     input_batch:
       - content: '{}'

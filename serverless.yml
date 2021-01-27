@@ -46,4 +46,4 @@ functions:
     events:
       - http:
           method: get
-          path: /trigger-err
+          path: /bug
