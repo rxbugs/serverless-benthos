@@ -47,3 +47,16 @@ functions:
       - http:
           method: get
           path: /bug
+  worker:
+    runtime: nodejs12.x
+    handler: handlers/worker.default
+    package:
+      individually: true
+      include:
+        - handlers/worker.js
+        - LICENSE.txt
+      exclude:
+        - '*'
+        - '*/**'
+    environment:
+      NODE_ENV: production
