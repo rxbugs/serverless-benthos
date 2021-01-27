@@ -5,6 +5,12 @@ pipeline:
         root.body = "{\"data\":\"TODO\"}"
         root.statusCode = 200
     - resource: worker_lambda
+    - bloblang: |
+        root = if meta().exists("lambda_function_error") {
+          throw("Invocation failed due to %v: %v".format(this.errorType, this.errorMessage))
+        } else {
+          this
+        }
     - log:
         message: 'Error: ${! error() }'
 
