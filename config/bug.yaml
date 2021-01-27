@@ -5,6 +5,15 @@ pipeline:
         root.body = "{\"data\":\"TODO\"}"
         root.statusCode = 200
 
+output:
+  switch:
+    cases:
+      - check: errored()
+        output:
+          reject: ${! error() }
+      - output:
+          sync_response: {}
+
 logger:
   level: ${LOG_LEVEL:info}
   static_fields:
